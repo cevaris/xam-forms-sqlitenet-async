@@ -33,14 +33,14 @@ namespace SqliteAsyncExample.Droid
             var dbPath = GetDatabasePath();
 
             // Return the synchronous database connection 
-            return new SQLiteConnection(new SQLitePlatformAndroid(), dbPath);
+            return new SQLiteConnection(new SQLitePlatformAndroidN(), dbPath);
         }
 
         public SQLiteAsyncConnection GetAsyncConnection()
         {
             var dbPath = GetDatabasePath();
 
-            var platForm = new SQLitePlatformAndroid();
+            var platForm = new SQLitePlatformAndroidN();
 
             var connectionFactory = new Func<SQLiteConnectionWithLock>(
                 () =>
